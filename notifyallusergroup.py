@@ -86,7 +86,7 @@ def main():
         for group in groups:
             grouplist = grouplist + '{0}'.format(group['email']) + '\n'
     
-        message = CreateMessage('anthony.wollenburg2@isd728.org', 'notify@isd728.org', 'All users within Independent School District 728', grouplist)
+        message = CreateMessage(sender, to, subject, grouplist)
         SendMessage(servicegmail, 'me', message)
 
 if __name__ == '__main__':
